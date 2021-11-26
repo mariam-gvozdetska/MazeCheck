@@ -13,7 +13,7 @@ TEST(UnionFindCheck, GoodPathCheck) {
 	int b8[] = { 0,0,0,1,1,1,1,0,0,0,1,1,1,1,0 };
 	int b9[] = { 1,1,0,0,0,1,1,0,0,0,1,1,0,0,0 };
 	int b10[] = { 1,1,0,0,0,1,1,0,0,0,1,1,0,0,0 };
-	int* testArr[] = { a1,a2,a3,a4,a5,b6,b7,b8,b9,b10 };
+	const int* testArr[] = { a1,a2,a3,a4,a5,b6,b7,b8,b9,b10 };
 	EXPECT_TRUE(UnionFindSearch::checkPath(testArr, 10, 15));
 }
 
@@ -28,7 +28,7 @@ TEST(UnionFindCheck, EmptyArrayCheck) {
 	int b8[] = { 0,0,0,1,1,1,1,0,0,0,1,1,1,1,0 };
 	int b9[] = { 1,1,0,0,0,1,1,0,0,0,1,1,0,0,0 };
 	int b10[] = { 1,1,0,0,0,1,1,0,0,0,1,1,0,0,0 };
-	int* testArr[] = { a1,a2,a3,a4,a5,b6,b7,nullptr,b8,b9,b10 };
+	const int* testArr[] = { a1,a2,a3,a4,a5,b6,b7,nullptr,b8,b9,b10 };
 	EXPECT_FALSE(UnionFindSearch::checkPath(testArr, 10, 15));
 }
 
@@ -43,7 +43,7 @@ TEST(UnionFindCheck, NoPathCheck) {
 	int b8[] = { 0,0,0,1,1,1,1,0,0,0,1,1,1,1,0 };
 	int b9[] = { 1,1,0,0,0,1,1,0,0,0,1,1,0,0,0 };
 	int b10[] = { 1,1,0,0,0,1,1,0,0,0,1,1,0,0,0 };
-	int* testArr[] = { a1,a2,a3,a4,a5,b6,b7,b8,b9,b10 };
+	const int* testArr[] = { a1,a2,a3,a4,a5,b6,b7,b8,b9,b10 };
 	EXPECT_FALSE(UnionFindSearch::checkPath(testArr, 10, 15));
 }
 
@@ -58,7 +58,7 @@ TEST(UnionFindCheck, BiggerOneCheck) {
 	int b8[] = { 0,0,0,1,1,1,1,0,0,0,1,1,1,1,0 };
 	int b9[] = { 1,1,0,0,0,1,1,0,0,0,1,1,0,0,0 };
 	int b10[] = { 1,1,0,0,0,1,1,0,0,0,1,1,0,0,0 };
-	int* testArr[] = { a1,a2,a3,a4,a5,b6,b7,b8,b9,b10 };
+	const int* testArr[] = { a1,a2,a3,a4,a5,b6,b7,b8,b9,b10 };
 	EXPECT_FALSE(UnionFindSearch::checkPath(testArr, 10, 15));
 }
 
@@ -88,7 +88,7 @@ TEST(UnionFindCheck, LongPathCheck) {
 	int a23[] = { 0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 	int a24[] = { 0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 };
 	int a25[] = { 0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-	int* testArr[] = { a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25 };
+	const int* testArr[] = { a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25 };
 	EXPECT_TRUE(UnionFindSearch::checkPath(testArr, 25, 25));
 	EXPECT_FALSE(UnionFindSearch::checkPath(testArr, 25, 24));
 }
@@ -119,7 +119,7 @@ TEST(WidthSearch, LongPathCheck) {
 	int a23[] = { 0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0 };
 	int a24[] = { 0,1,0,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1 };
 	int a25[] = { 0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0 };
-	int* testArr[] = { a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25 };
+	const int* testArr[] = { a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25 };
 	int* path = nullptr;
 	EXPECT_TRUE(WidthSearch::findPath(testArr,25,25,path,0,0,24,24));
 	EXPECT_TRUE(path != nullptr);
